@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
+
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -22,11 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${robotoMono.variable}`}
-      >  
-       <Header />
+    <html lang="en" className={robotoMono.variable}>
+      <body className="bg-gray-50">  
+        {/* Header */}
+       
         {children}
       </body>
     </html>
